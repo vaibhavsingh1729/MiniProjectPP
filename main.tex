@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Project: Geotrack Application}
+\author{Vaibhav Singh}
+
+\begin{document}
+
+\maketitle
+
+\section{Goal of the Project}
+
+The goal of this project is to create an application that provides users with a precise location tracking feature and helps them keep track of their running and cycling goals within a specified location. The application will allow users to mark specific locations where they want to engage in these activities and will log all user-provided data in local storage. This way, even when the user closes the application and returns at a later time, their previously saved goals will be readily accessible.
+
+\section{Technologies Used}
+
+The following technologies will be used to develop the Geotrack Application:
+
+\begin{itemize}
+  \item HTML
+  \item CSS
+  \item JavaScript (including Object-Oriented Programming concepts)
+  \item Geolocation API
+  \item Leaflet.js
+  \item Leaflet.css
+  \item Local Storage Browser API
+\end{itemize}
+
+\section{How the Project Works}
+
+The Geotrack Application is designed to provide users with a seamless experience of tracking their running and cycling goals at precise locations. Here's a step-by-step explanation of how the project functions:
+
+\begin{itemize}
+  \item \textbf{User Location Access}: When the user visits the webpage, a pop-up will appear asking for access to their location.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{1.png}
+  \caption{Location Display}
+  \label{fig:sample}
+\end{figure}
+
+  \item \textbf{Location Display}: After the user has allowed access to their location, it will show their exact location and their previous activities that the user has marked on the web page.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{2.png}
+  \caption{Setting Goals}
+  \label{fig:sample}
+\end{figure}
+
+
+  \item \textbf{Setting Goals}: Whenever the user clicks on the map, a form will appear with two main options - Running or cycling. Now the user can set their goal for either running or cycling.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{3.png}
+  \caption{Running Goal}
+  \label{fig:sample}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{4.png}
+  \caption{Cycling Goal}
+  \label{fig:sample}
+\end{figure}
+
+  \item \textbf{Form Submission}: When the user submits the form, their location with their goal will be marked on the map.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{5.png}
+  \caption{Form Submission}
+  \label{fig:sample}
+\end{figure}
+  \item \textbf{Local Storage}: Additionally, the data provided by the user will be saved in the local storage of the browser. This way, even if the user exits the browser and visits the application next time, it will show their goals, and they can keep track of their goals on the map.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{6.png}
+  \caption{Local Storage}
+  \label{fig:sample}
+\end{figure}
+\end{itemize}
+
+\section{How the Project is Made}
+
+The Geotrack Application is constructed using the following steps:
+
+\begin{itemize}
+  \item \textbf{HTML and CSS}: HTML and CSS are used to design the structure of the webpage.
+
+  \item \textbf{Geolocation API}: When the user opens the application and allows access to their location using the Geolocation API in the browser, the exact longitude and latitude are received. With the help of the OpenStreetMap API, the user's precise location is displayed on the map.
+
+  \item \textbf{Marker Placement}: Whenever the user clicks on a particular location, an event handler function is triggered to obtain the exact coordinates of that location. Using this data, a marker is displayed at the exact location.
+
+  \item \textbf{Goal Form}: When the user clicks on a location, an HTML form pops up, presenting two options: running or cycling, each with its own suboptions.
+
+  \item \textbf{Form Submission}: Upon form submission, a marker is set on the chosen location with a tag indicating "Running/Cycling on Date." This information also appears in the log on the left side of the page.
+
+  \item \textbf{Local Storage}: All data is stored in the local storage of the browser in the form of key-value pairs.
+
+  \item \textbf{Object-Oriented Code}: The code is organized using Object-Oriented Programming (OOP) principles. The main class, App, contains two subclasses, Workouts and Map, and various methods, including the constructor, getPosition, loadMap, showForm, toggleElevationField, and newWorkout. The Running and Cycling classes inherit from the Workout class, providing specialized functionality.
+\end{itemize}
+
+\section{Sources Preferred during the Making of Project}
+
+Throughout the development of the project, we will refer to the following sources for guidance and documentation:
+
+\begin{itemize}
+  \item Mozilla Developer Network (MDN) Web Docs: \url{https://developer.mozilla.org/}
+  \item Leaflet Documentation
+\end{itemize}
+
+\end{document}
